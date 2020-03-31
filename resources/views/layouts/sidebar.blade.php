@@ -12,7 +12,7 @@
 
         <li class="menu-sidebar"><a href="{{ url('/produk') }}"><span class="fa fa-table"></span> Produk</span></a></li>
 
-        <li class="menu-sidebar"><a href="{{ url('/po/add') }}"><span class="fa fa-shopping-cart"></span> Pesan produk</span></a></li>
+        <li class="menu-sidebar"><a href="{{ url('/po/') }}"><span class="fa fa-shopping-cart"></span> Pesan produk</span></a></li>
 
         <li class="menu-sidebar"><a href="{{ url('/keluar') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</span></a></li>
 

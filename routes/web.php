@@ -48,9 +48,14 @@ Route::group(['middleware'=>'auth'], function(){
     Route::delete('myproductsDeleteAll', 'produk_Controller@deleteAll');
 
     // Route Untuk Purchase Order By Aditya Oktaviana
+    Route::get('/po','Po_controller@index');
     Route::get('po/add','Po_controller@add');
     Route::get('po/produk/{supplier}','Po_controller@get_produk');
     Route::post('po/add','Po_controller@store');
+    Route::get('po/approved/{id}','Po_controller@approved');
+    Route::get('po/{id}','Po_controller@detail');
+    Route::delete('po/line/{id}','Po_controller@hapus_line');
+    // Route::delete('po/hapus/{id}','Po_controller@hapus');
 });
 
 Auth::routes();

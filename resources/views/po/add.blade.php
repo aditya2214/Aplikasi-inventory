@@ -9,6 +9,7 @@
             <div class="box-header">
                 <p>
                     <button class="btn btn-sm btn-flat btn-warning btn-refresh"><i class="fa fa-refresh"></i> Refresh</button>
+                    <a href="{{url('po')}}" class="btn btn-sm btn-flat btn-danger "><i class="fa fa-arrow-left"></i> </a>
                 </p>
             </div>
             <form role="form" method="post" action="{{url('po/add')}}">
@@ -18,7 +19,7 @@
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Document_no</label>
-                                <input value="{{$docno}}" type="text" name="document_no" class="form-control" id="exampleInputEmail1" placeholder="Document No">
+                                <input value="{{$docno}}" type="text" name="document_no" class="form-control" id="exampleInputEmail1" placeholder="Document No" readonly>
                             </div>
 
                             @if (isset($id_supplier))
@@ -70,7 +71,7 @@
                                             <td>{{number_format($pd->buy,0)}}</td>
                                             <td>
                                                 <input type="hidden" name="produk[]" value="{{ $pd->id }}">
-                                                <input type="number" value="0" class="form-control" name="qty[]">
+                                                <input type="number" value="0" class="form-control" name="qty[]" requred>
                                             </td>
                                         </tr>
                                         @endforeach
